@@ -1,0 +1,34 @@
+{
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "name": "WebClip",
+  "description": "Get website url and title of current tab to clipboard with format options",
+  "icons": {
+    "48": "img/Bookmark_tag_32px_1194046_easyicon.net.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "32": "img/Bookmark_tag_32px_1194046_easyicon.net.png"
+    },
+    "default_title": "get URL",
+    "default_popup": "Popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*","http://localhost/", "https://www.baidu.com/*"],
+      "js": ["js/myscript.js", "js/login.js","js/jquery-3.3.1.min.js"],
+	    "run_at": "document_idle"
+    }
+  ],
+  "background": { 
+	"scripts": ["js/jquery-3.3.1.min.js", "js/background.js"]
+	},
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "clipboardWrite",
+    "http://localhost/",
+    "https://*/*",
+    "chrome://favicon/"]
+}

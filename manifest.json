@@ -16,12 +16,12 @@
   "content_scripts": [
     {
       "matches": ["http://localhost/*","http://localhost/", "https://www.baidu.com/*"],
-      "js": ["js/myscript.js", "js/login.js","js/jquery-3.3.1.min.js"],
+      "js": ["js/jquery-3.3.1.min.js"],
 	    "run_at": "document_idle"
     }
   ],
   "background": { 
-	"scripts": ["js/jquery-3.3.1.min.js", "js/background.js"]
+	"scripts": ["js/jquery-3.3.1.min.js"]
 	},
   "permissions": [
     "activeTab",
